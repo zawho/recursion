@@ -1,0 +1,31 @@
+{
+  "name": "recursion",
+  "version": "1.0.0",
+  "description": "Thursday, January 4, 2024 In this project I will implement what I have learned from the recursion lesson of The Odin Project's Javascript track to solve two problems. In the first problem, a warm up, I will write both a non-recursive and recursive function for solving the Fibonacci sequence. In the second problem, I will write a merge sort function.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zawho/recursion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zawho/recursion/issues"
+  },
+  "homepage": "https://github.com/zawho/recursion#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "3.1.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
