@@ -16,20 +16,8 @@ function fibs(n) {
 
 // Recursive Fibonacci solution.
 function fibsRec(n) {
-    
+    /* i more or less found a solution but i don't really understand.
+    so im gonna come back after doing merge sort */
 }
 
-function test(n, arr) {
-    if (n === 1) {
-        arr.push(n);
-        return n;
-    }
-    const x = n + test(n - 1, arr);
-    arr.push(x);
-    if (arr.length === 5) {
-        return arr;
-    }
-    return x;
-}
-
-export { fibs, fibsRec, test };
+export { fibs, fibsRec };

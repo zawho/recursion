@@ -16,7 +16,7 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fibs: () => (/* binding */ fibs),\n/* harmony export */   fibsRec: () => (/* binding */ fibsRec),\n/* harmony export */   test: () => (/* binding */ test)\n/* harmony export */ });\n// Non-recursive Fibonacci solution.\nfunction fibs(n) {\n    const arr = [];\n    let x = 0;\n    let y = 1;\n    let z = x + y;\n    arr.push(x, y, z);\n    for (let i = 3; i < n; i++) {\n        x = y;\n        y = z;\n        z = x + y;\n        arr.push(z);\n    }\n    return arr;\n}\n\n// Recursive Fibonacci solution.\nfunction fibsRec(n) {\n    \n}\n\nfunction test(n, arr) {\n    if (n === 1) {\n        arr.push(n);\n        return n;\n    }\n    const x = n + test(n - 1, arr);\n    arr.push(x);\n    if (arr.length === 5) {\n        return arr;\n    }\n    return x;\n}\n\n\n\n//# sourceURL=webpack://recursion/./src/fibonacci.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fibs: () => (/* binding */ fibs),\n/* harmony export */   fibsRec: () => (/* binding */ fibsRec)\n/* harmony export */ });\n// Non-recursive Fibonacci solution.\nfunction fibs(n) {\n    const arr = [];\n    let x = 0;\n    let y = 1;\n    let z = x + y;\n    arr.push(x, y, z);\n    for (let i = 3; i < n; i++) {\n        x = y;\n        y = z;\n        z = x + y;\n        arr.push(z);\n    }\n    return arr;\n}\n\n// Recursive Fibonacci solution.\nfunction fibsRec(n) {\n    /* i more or less found a solution but i don't really understand.\n    so im gonna come back after doing merge sort */\n}\n\n\n\n//# sourceURL=webpack://recursion/./src/fibonacci.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/fibonacci.js\");\n // eslint-disable-line no-unused-vars\n\n// console.log(fibs(8));\n// console.log(fibsRec(8));\nconsole.log((0,_fibonacci__WEBPACK_IMPORTED_MODULE_0__.test)(5, []));\n\n//# sourceURL=webpack://recursion/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/fibonacci.js\");\n // eslint-disable-line no-unused-vars\n\n// console.log(fibs(8));\nconsole.log((0,_fibonacci__WEBPACK_IMPORTED_MODULE_0__.fibsRec)(8));\n\n//# sourceURL=webpack://recursion/./src/index.js?");
 
 /***/ })
 
