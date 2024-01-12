@@ -5,4 +5,4 @@ import mergeSort from './merge-sort';
 
 // console.log(fibsRec(8));
 
-console.log(mergeSort([24, 8]));
+mergeSort([4, 3, 2, 1]);
