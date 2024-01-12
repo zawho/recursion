@@ -32,11 +32,8 @@ function mergeSort(arr) {
         return arr;
     }
     const split = Math.floor(arr.length / 2);
-    const left = arr.slice(0, (split));
-    const right = arr.slice(split);
-    mergeSort(left);
-    mergeSort(right);
-    console.log(merge(left, right));
+    const left = mergeSort(arr.slice(0, (split)));
+    const right = mergeSort(arr.slice(split));
     return merge(left, right);
 }
   
