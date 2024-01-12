@@ -16,7 +16,7 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fibs: () => (/* binding */ fibs),\n/* harmony export */   fibsRec: () => (/* binding */ fibsRec)\n/* harmony export */ });\n// Non-recursive Fibonacci solution.\nfunction fibs(n) {\n    const arr = [];\n    let x = 0;\n    let y = 1;\n    let z = x + y;\n    arr.push(x, y, z);\n    for (let i = 3; i < n; i++) {\n        x = y;\n        y = z;\n        z = x + y;\n        arr.push(z);\n    }\n    return arr;\n}\n\n// Recursive Fibonacci solution.\nfunction fibsRec(n) {\n    /* i more or less found a solution but i don't really understand.\n    so im gonna come back after doing merge sort */\n}\n\n\n\n//# sourceURL=webpack://recursion/./src/fibonacci.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fibs: () => (/* binding */ fibs),\n/* harmony export */   fibsRec: () => (/* binding */ fibsRec)\n/* harmony export */ });\n// Non-recursive Fibonacci solution.\nfunction fibs(n) {\n    const arr = [];\n    let x = 0;\n    let y = 1;\n    let z = x + y;\n    arr.push(x, y, z);\n    for (let i = 3; i < n; i++) {\n        x = y;\n        y = z;\n        z = x + y;\n        arr.push(z);\n    }\n    return arr;\n}\n\n// Recursive Fibonacci solution.\nfunction fibsRec(n) {\n    if (n === 2) {\n        return [0, 1];\n    }\n    const arr = fibsRec(n - 1);\n    const last = arr.length;\n    arr.push(arr[last - 1] + arr[last - 2]);\n    return arr;\n}\n\n\n\n//# sourceURL=webpack://recursion/./src/fibonacci.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/fibonacci.js\");\n/* harmony import */ var _merge_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./merge-sort */ \"./src/merge-sort.js\");\n // eslint-disable-line no-unused-vars\n\n\n// console.log(fibs(8));\n\nconsole.log((0,_fibonacci__WEBPACK_IMPORTED_MODULE_0__.fibsRec)(8));\n\n// console.log(mergeSort([3, 2, 1, 13, 8, 5, 0, 1]));\n\n//# sourceURL=webpack://recursion/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fibonacci__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fibonacci */ \"./src/fibonacci.js\");\n/* harmony import */ var _merge_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./merge-sort */ \"./src/merge-sort.js\");\n/* eslint-disable no-console */\n\n\n\nconsole.log(`Non-recursive Fibonacci: [${(0,_fibonacci__WEBPACK_IMPORTED_MODULE_0__.fibs)(8)}]`);\nconsole.log(`Recursive Fibonacci: [${(0,_fibonacci__WEBPACK_IMPORTED_MODULE_0__.fibsRec)(8)}]`);\nconsole.log(`Merge sort: [${(0,_merge_sort__WEBPACK_IMPORTED_MODULE_1__[\"default\"])([3, 2, 1, 13, 8, 5, 0, 1])}]`);\n\n//# sourceURL=webpack://recursion/./src/index.js?");
 
 /***/ }),
 

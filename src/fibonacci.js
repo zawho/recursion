@@ -16,8 +16,13 @@ function fibs(n) {
 
 // Recursive Fibonacci solution.
 function fibsRec(n) {
-    /* i more or less found a solution but i don't really understand.
-    so im gonna come back after doing merge sort */
+    if (n === 2) {
+        return [0, 1];
+    }
+    const arr = fibsRec(n - 1);
+    const last = arr.length;
+    arr.push(arr[last - 1] + arr[last - 2]);
+    return arr;
 }
 
 export { fibs, fibsRec };
